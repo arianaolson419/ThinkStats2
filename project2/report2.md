@@ -18,9 +18,9 @@ The codebook for the GSS can be found [here](https://gssdataexplorer.norc.org/do
 
 ### About the Survey
 
-For more detailed information about the GSS, please refer to the [codebook introduction](https://gssdataexplorer.norc.org/documents/463/display). 
+For more detailed information about the GSS, please refer to the [codebook introduction](https://gssdataexplorer.norc.org/documents/463/display).
 
-The GSS is administered to an independently drawn sample of English speaking (and Spanish speaking after 2006) people over the age of 18 and living in non-institutional arrangements in the United States. Several sampling methods have been used throughout the years that the GSS has been administered. These include 
+The GSS is administered to an independently drawn sample of English speaking (and Spanish speaking after 2006) people over the age of 18 and living in non-institutional arrangements in the United States. Several sampling methods have been used throughout the years that the GSS has been administered. These include
 
 Block quota sampling was employed in earlier survey years (1972-4) and full probability sampling was used in half of the 1975 and 1976 surveys and all subsequent surveys.
 
@@ -30,7 +30,7 @@ The terms of use for using the GSS data are given in full [on their website](htt
 
 ### Descriptions of Key Variables Used in Analysis
 #### `homosex`
-The `homosex` variable represents how wrong a respondent thinks homosexual sex is. It has been consistently included in every GSS since 1987. The question posed to survey takers is: " What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" The response choices are as follows:
+The `homosex` variable represents how wrong a respondent thinks homosexual sex is. It has been consistently included in every GSS since 1987. The question posed to survey takers is: "What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" The response choices are as follows:
 - Always wrong
 - Almost always wrong
 - Wrong only sometimes
@@ -41,17 +41,23 @@ The `homosex` variable represents how wrong a respondent thinks homosexual sex i
 For this analysis, we focus only on respondents who answered "Always wrong" or "Not wrong at all".
 
 #### `year`
-The `year variable represents the year the respondent took the survey.
+The `year` variable represents the year the respondent took the survey. The question that created the `homosex` variable was only asked regularly from 1987, so we only selected data from the `year` 1987 to today.
 
 #### `cohort`
 The `cohort` variable represents the birth cohort of the respondent, or the range of birth years they belong to.
 
 #### `age`
-The `age` variable represents the age of the respondent at the time they took the survey. Respondants are ages 18 and older.
+The `age` variable represents the age of the respondent at the time they took the survey. Respondents are ages 18 and older.
+
+#### `relig`
+The `relig` variable represents the religion of the respondent at the time they took the survey. They specifically asked, "What is your religious preference? Is it Protestant, Catholic, Jewish, some other religion, or no religion?"
+
+#### `attend`
+The `attend` variable represents how frequently the respondent attends religious services. We took this to refer to the seriousness of their religious practice.
 
 #### `reg16` and `region`
 
-`reg16` represents the region that the respondent lived in at age 16 and `region` represents the region in which the repondent took the survey. Both of these group US states in the same way. These regions are as follows: 
+`reg16` represents the region that the respondent lived in at age 16 and `region` represents the region in which the respondent took the survey. Both of these group US states in the same way. These regions are as follows:
 
 - New England = Maine, Vermont, New Hampshire, Massachusetts, Connecticut, Rhode Island
 - Middle Atlantic = New York, New Jersey, Pennsylvania
@@ -65,7 +71,7 @@ The `age` variable represents the age of the respondent at the time they took th
 
 ## Analysis
 ### Age-Period-Cohort
-Generational analysis of public opinion can be broken down to look into period effect, cohort effect (effects due to the year that the respondent was born), and age effect (effects due to respondents aging). Completing an age-period-cohort analysis on the public opinion of same-sex relations allows us to identify which of those three items drives the change.
+Generational analysis of public opinion can be broken down to look into period effect, cohort effect, and age effects. Completing an age-period-cohort analysis on the public opinion of same-sex relations allows us to identify which of those three items drives the change.
 
 #### Period Effect
 Period effects appear as changes across the respondents regardless of whatever groups they are broken down by, but not necessarily to the same amount.
@@ -85,11 +91,11 @@ Below is a graph of average opinion on same-sex relations within each birth year
 #### Age Effect
 Age effects indicate that there are differences across generations regardless of cohort and survey year. Age effects appear as changes where all groups move together.
 ##### Grouped by Year
-The graphs below plot the average opinion toward same-sex relations for each age of each seven year grouping. In the same-sex relations is never wrong graph there is a fairly consistent decrease for all ages, but the changes do not move at the same rate within the different 7-year groups. Within the same-sex relations are always wrong graph, the percentages vary in a really inconsistent way across ages from year-to year. $$$$$$$$$$$$$$$$$$$$$
+The graphs below plot the average opinion toward same-sex relations for each age of each seven year grouping. In the same-sex relations is never wrong graph there is a fairly consistent decrease for all ages, but the changes do not move at the same rate within the different 7-year groups. Within the same-sex relations are always wrong graph, the percentages vary in a really inconsistent way across ages from year-to year. There does not seem to be a strong age effect here.
 ![Plot of 'always wrong' grouped by cohort, plotted by age](images/year-age wrong.png)
 ![Plot of 'never wrong' grouped by cohort, plotted by age](images/year-age right.png)
 ##### Grouped by Cohort
-Below are the graphs of the average percentage of disapproval (left) and approval (right) of same-sex relations within birth decade, and plotted against the age that the respondents were when they took the survey. Across the decade $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Below are the graphs of the average percentage of disapproval (left) and approval (right) of same-sex relations within birth decade, and plotted against the age that the respondents were when they took the survey. This graph also contends that there does not seem to be a strong age effect. Each cohort group moves down a bit, but not a lot and to very different extents.
 ![Plot of 'always wrong' grouped by cohort, plotted by age](images/coh-age wrong.png)
 ![Plot of 'never wrong' grouped by cohort, plotted by age](images/coh-age right.png)
 
@@ -109,7 +115,7 @@ The explanatory variables we are using in this model are:
 We are using these variables to capture several trends that we found during variable exploration.
 
 #### Religion
-We will first look at how the religion of the respondent influenced the likelihood that they would believe homosexual sex was always wrong. Shown below are plots of the proportions of "Always Wrong" and "Not Wrong at All" answers for each survey year, grouped by the religion of the respondent. Only the top 5 most popular religious groups are shown because the less popular religious groups may cotain fewer than 20 respondents per year, as opposed to over 200 for the popular groups.
+We will first look at how the religion of the respondent influenced the likelihood that they would believe homosexual sex was always wrong. Shown below are plots of the proportions of "Always Wrong" and "Not Wrong at All" answers for each survey year, grouped by the religion of the respondent. Only the top 5 most popular religious groups are shown because the less popular religious groups may contain fewer than 20 respondents per year, as opposed to over 200 for the popular groups.
 
 ![Plot of 'always wrong' by religion](images/relig_proportions_always.png)
 ![Plot of 'not wrong at all' by religion](images/relig_proportions_never.png)
@@ -164,10 +170,10 @@ Each year group is less likely to answer "Always Wrong" than the one before it. 
 
 ## Conclusion
 
-We find from this analysis that both the year the survey was taken by a respondent and the year that they were born have large effects on their opinion of same-sex relations. TODO something about age$$$$$$$$$. 
+We find from this analysis that both the year the survey was taken by a respondent and the year that they were born have large effects on their opinion of same-sex relations. Relative to the period and cohort effect, age has a much less of an effect on the data.
 
 Additionally, we find that there are a number of demographic variables that can also be used to predict opinions of same-sex relations. A person's age, religion, place where they live, and frequency of religious service attendance all influence their likelihoods of disapproving of same-sex relations.
 
 It is encouraging that within each demographic variable that we analyzed, the trend is that disapproval of same-sex relations is decreasing with time. We hope that this trend is an indicator of a general increase of acceptance, and that this trend continues into the future.
 
-Social issues are complex, particularly topics that cross social, political, and religious boundaries. Although our predictive model is useful for highlighting interesting demographic trends and unpacking some of the complexity of this topic, it is very important to remember that this **should not be used to pass judgement on a person based on their demographics**. People vary in their demographic groups, and applying a blanket assumption about what they believe can be damaging and incorrect.
+Social issues are complex, particularly topics that cross social, political, and religious boundaries. Although our predictive model is useful for highlighting interesting demographic trends and unpacking some of the complexity of this topic, it is very important to remember that this should not be used to pass judgment on a person based on their demographics. People vary in their demographic groups, and applying a blanket assumption about what they believe can be damaging and incorrect.
