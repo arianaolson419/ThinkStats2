@@ -65,3 +65,6 @@ docs/_build/
 
 # Jupyter Files
 .ipynb_checkpoints/
+
+# Swap files
+*.swp
