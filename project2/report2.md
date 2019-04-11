@@ -66,9 +66,21 @@ The explanatory variables we chose to use in this model are:
 
 We chose to use these variables in the model to capture several trends that we found during variable exploration.
 
+#### Religion
+We first looked at how the religion of the respondent influenced the likelihood that they would believe homosexual sex was always wrong. We expected to see that Protestant and Catholic respondents were most likely to say that homosexual sex was always wrong, and that Jewish respondents were least likely to answer this way. This is based on the answers for each group in the GSS data. These patterns can be seen below.
+
+![Plot of 'always wrong' by religion](images/relig_proportions_always.png)
+![Plot of 'not wrong at all' by religion](images/relig_proportions_never.png)
+
+For this analysis, we generated predictions for each of the 5 most popular religions that respondents reported in the GSS over a range of survey years. These religions are Protestant, Catholic, Jewish, "Other", and "None". All other explanatory variables were held constant. The plot below shows the results.
+
+![Logistic regression plot of relig](images/relig_log.png)
+
+As expected, the model predicts that Protestants are most likely to say that homosexual sex is always wrong while Jewish respondents are least likely. The trend for all groups is negative as year increases. The differences in likelihoods among groups stays fairly consistent year to year, except when the likelihoods approach the asymptotes of 1.0 and 0.0.
+
 #### Region
 
-We wanted to see if the region respondents reported living in at the age of 16 influenced their opinion on homosexual sex. Shown below are plots of the proportion of respondents who think homosexual sex is always wrong and who think that homosexual sex is never wrong. The respondents are grouped by their responses to `reg16`, and the proportions are plotted by survey year.
+We also wanted to see if the region respondents reported living in at the age of 16 influenced their opinion on homosexual sex. Shown below are plots of the proportion of respondents who think homosexual sex is always wrong and who think that homosexual sex is never wrong. The respondents are grouped by their responses to `reg16`, and the proportions are plotted by survey year.
 
 ![Plot of 'always wrong' by reg16](images/reg16_proportions_always.png)
 ![Plot of 'never wrong' by reg16](images/reg16_proportions_never.png)
@@ -81,24 +93,20 @@ In our predictive model, we expected to see the relative likelihoods of each reg
 
 As expected, the relative likelihoods for each region mirror their proportions in the raw data. Except around the asymptotes, the regions do not seem to be converging or switching in rank over the years. This makes sense based on the raw data. As the years increase, all of the regions become less likely to answer "Always Wrong".
 
-#### Religion
-We first looked at how the religion of the respondent influenced the likelihood that they would believe homosexual sex was always wrong. We expected to see that Protestant and Catholic respondents were most likely to say that hoomosexual sex was always wrong, and that Jewish respondents were least likely to answer this way. This is based on the answers for each group in the GSS data. These patterns can be seen below.
-
-![Plot of 'always wrong' by religion](images/relig_proportions_always.png)
-![Plot of 'not wrong at all' by religion](images/relig_proportions_never.png)
-
-For this analysis, we generated predictions for each of the 5 most popular religions that respondents reported in the GSS over a range of survey years. These religions are Protestant, Catholic, Jewish, "Other", and "None". All other explanatory variables were held constant. The plot below shows the results.
-
-![Logistic regression plot of relig](images/relig_log.png)
-
-As expected, the model predicts that Protestants are most likely to say that homosexual sex is always wrong while Jewish respondents are least likely. The trend for all groups is negative as year increases. The differences in likelihoods among groups stays fairly consistent year to year, except when the likelihoods approach the asymptotes of 1.0 and 0.0.
-
 #### Frequency of Attendance of Religious Services
+
+We also wanted to see if how often respondents attend religious services influenced their answers to `homosex`. The frequency a person attends religious services can be used as a rough metric for how religious they are, which is why we chose this variable to examine. This variable is independent of the specific religion a person reported. We expected to see that the higher frequency groups would have higher proportions of people who answered "Always Wrong" and the lowest proportions of people who answered "Not Wrong at All". Below are the plots of the proportions of each of these groups by survey year.
 
 ![Plot of 'always wrong' by 'attend'](images/attend_proportions_always.png)
 ![Plot of 'never wrong' by 'attend'](images/attend_proportions_never.png)
 
+As expected, the proportions of respondents who answered "Always Wrong" in each group are ordered from most frequent to least frequent, and the opposite is true for the proportions of respondents from each group that answered "Not Wrong at All". Again, like in the previous variables examined, all proportions of "Always Wrong" answers decrease with time, and all prportions of "Not Wrong at All" answers increase over time. The most notable group is the group that attends services more than once a week. The difference in proportions between this group and the next closest group is much greater than the difference among any other adjacent groups. Additionally, this group never overlaps with another for either answer. Finally, the magnitude of the rate of change is less than the other groups. This tells us that by this one metric, very religious people are much more likely to disapprove of homosexual sex and are slower to change their opinions.
+
+To see how this variable affects the predictive model, we ran the model for each group over a range of years while holding the other explanatory vaiables constant. The plot of these predictions is shown below.
+
 ![Logistic regression plot of 'attend'](images/attend_log.png)
+
+Although the difference in likelihood from the most frequent attenders to the next most frequent is much smaller in the model, there is a very large difference between these two groups and the next most frequent. The rankings in likelihood match the rankings in proportion by year, and all of the groups have a negative trend with time. The effect of the most frequent attending group may be more pronounced in the model if the other explanatory variables were held to different constant values that correspond more with who is most likely to be more religious.
 
 #### Survey Year
 
