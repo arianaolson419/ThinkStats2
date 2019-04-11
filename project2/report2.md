@@ -17,6 +17,7 @@ The General Social Survey, or GSS, is one of the most frequently analyzed data s
 The codebook for the GSS can be found [here](https://gssdataexplorer.norc.org/documents#doc_441) It provides detailed information about the survey design and variables in the dataset.
 
 ### About the Survey
+
 For more detailed information about the GSS, please refer to the [codebook introduction](https://gssdataexplorer.norc.org/documents/463/display). 
 
 The GSS is administered to an independently drawn sample of English speaking (and Spanish speaking after 2006) people over the age of 18 and living in non-institutional arrangements in the United States. Several sampling methods have been used throughout the years that the GSS has been administered. These include 
@@ -24,6 +25,8 @@ The GSS is administered to an independently drawn sample of English speaking (an
 Block quota sampling was employed in earlier survey years (1972-4) and full probability sampling was used in half of the 1975 and 1976 surveys and all subsequent surveys.
 
 Until 2000, the survey was administered with paper and pencil. From 2002 onward, the survey was conducted using computer-aided personal interviewing.
+
+The terms of use for using the GSS data are given in full [on their website](https://gssdataexplorer.norc.org/pages/show?page=gss%2Fterms). Key points from these terms are that the data, software, and documentation will be used responsibly, and that the data is offered "as is" with no guarantee of completeness, accuracy, or fitness for a particular purpose.
 
 ### Descriptions of Key Variables Used in Analysis
 #### `homosex`
