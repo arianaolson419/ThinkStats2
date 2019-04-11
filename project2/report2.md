@@ -6,6 +6,8 @@ Ariana Olson, Emma Price
 
 Public opinion of same-sex relations has changed dramatically in recent years. What was in recent memory something that most people considered to be "always wrong" is now considered by most people to be "always right." This raises the question of how public opinion has changed. Have younger people, who did not experience the AIDs crisis and have grown up with gay role models sufficiently shifted how public opinion appears? Has everyone become less disapproving of same-sex relations overtime? Are young people consistently more accepting and then grow less so as they age? As well, how do demographics like sex, income, location, and religion effect this change in public opinion?
 
+Our full analysis can be found [on github](https://github.com/arianaolson419/ThinkStats2/blob/master/project2/project2.ipynb)
+
 ## The General Social Survey Dataset
 
 The General Social Survey, or GSS, is one of the most frequently analyzed data sets in the social sciences. According to the [About page of the GSS website says](https://gssdataexplorer.norc.org/pages/show?page=gss%2Fabout),
