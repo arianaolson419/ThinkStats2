@@ -38,7 +38,7 @@ The `homosex` variable represents how wrong a respondent thinks homosexual sex i
 - Other
 - Don't know
 
-For this analysis, we focused only on respondents who answered "Always wrong" or "Not wrong at all".
+For this analysis, we focus only on respondents who answered "Always wrong" or "Not wrong at all".
 
 #### `year`
 The `year` variable represents the year the respondent took the survey. The question that created the `homosex` variable was only asked regularly from 1987, so we only selected data from the `year` 1987 to today.
@@ -120,12 +120,11 @@ We will first look at how the religion of the respondent influenced the likeliho
 ![Plot of 'always wrong' by religion](images/relig_proportions_always.png)
 ![Plot of 'not wrong at all' by religion](images/relig_proportions_never.png)
 
-There is a fairly clear stratification of proportions among the religious groups, which indicates that religion could be a fairly significant predictor of how a person feels about homosexual sex.
+There is a fairly clear stratification of proportions among the religious groups, which indicates that religion could be a fairly significant predictor of how a person feels about homosexual sex. Aside from the "Other" group, which may include a disproportionally varied group of respondents, the groups all maintain a relative ranking with Protestants having the highest proportion of "Always wrong" and the lowest proportion of "Not wrong at all" answers, while the opposite is true for the Jewish group. All of the proportions of "Always wrong" answers decrease with time, while all of the proportions of "Not wrong at all" answers increase with time.
 
-We expect to see that Protestant and Catholic respondents are most likely to say that homosexual sex was always wrong, and that Jewish respondents are least likely to answer this way. This is based on the answers for each group in the GSS data. These patterns can be seen below.
+We expect to see in the model that Protestant and Catholic respondents are most likely to say that homosexual sex was always wrong, and that Jewish respondents are least likely to answer this way. This is based on the answers for each group in the GSS data.
 
-
-For this analysis, we generated predictions for each of the 5 most popular religions that respondents reported in the GSS over a range of survey years. These religions are Protestant, Catholic, Jewish, "Other", and "None". All other explanatory variables were held constant. The plot below shows the results.
+For this analysis, we generate predictions for each of the 5 most popular religions that respondents reported in the GSS over a range of survey years. These religions are Protestant, Catholic, Jewish, "Other", and "None". All other explanatory variables are held constant. The plot below shows the results.
 
 ![Logistic regression plot of relig](images/relig_log.png)
 
@@ -133,29 +132,29 @@ As expected, the model predicts that Protestants are most likely to say that hom
 
 #### Region
 
-We also wanted to see if the region respondents reported living in at the age of 16 influenced their opinion on homosexual sex. Shown below are plots of the proportion of respondents who think homosexual sex is always wrong and who think that homosexual sex is never wrong. The respondents are grouped by their responses to `reg16`, and the proportions are plotted by survey year.
+We also want to see if the region respondents reported living in at the age of 16 influenced their opinion on homosexual sex. Shown below are plots of the proportion of respondents who think homosexual sex is always wrong and who think that homosexual sex is never wrong. The respondents are grouped by their responses to `reg16`, and the proportions are plotted by survey year.
 
 ![Plot of 'always wrong' by reg16](images/reg16_proportions_always.png)
 ![Plot of 'never wrong' by reg16](images/reg16_proportions_never.png)
 
 For all region groups, the proportion of people who answered "Always Wrong" decreases as the survey year increases, and the proportion of people who answered "Not Wrong at All" increases with survey year. However, the region groups are distinct, and the difference in proportion among groups is fairly constant. New England has both the lowest proportion of "Always Wrong" responses and the highest proportion of "Not Wrong At All" responses. The opposite is true for East South Central (Kentucky, Tennessee, Alabama, Mississippi).
 
-In our predictive model, we expected to see the relative likelihoods of each region to answer "Always Wrong" for `homosex` to be similar in ranking to the proportion of "Always Wrong" responses in the data set. We wanted to see if the model predicted any notable trends that are more difficult to see in the raw data. The predictions for each region are shown below.
+In our predictive model, we expect to see the relative likelihoods of each region to answer "Always Wrong" for `homosex` to be similar in ranking to the proportion of "Always Wrong" responses in the data set. We want to see if the model predicted any notable trends that are more difficult to see in the raw data. The predictions for each region are shown below.
 
 ![Logistic regression plot of reg16](images/reg16_log.png)
 
-As expected, the relative likelihoods for each region mirror their proportions in the raw data. Except around the asymptotes, the regions do not seem to be converging or switching in rank over the years. This makes sense based on the raw data. As the years increase, all of the regions become less likely to answer "Always Wrong".
+As expected, the relative likelihoods for each region mirror their proportions in the raw data. Except around the asymptotes (when the likelihoods are close to 0 or 1), the regions do not seem to be converging or switching in rank over the years. This makes sense based on the raw data. As the years increase, all of the regions become less likely to answer "Always Wrong".
 
 #### Frequency of Attendance of Religious Services
 
-We also wanted to see if how often respondents attend religious services influenced their answers to `homosex`. The frequency a person attends religious services can be used as a rough metric for how religious they are, which is why we chose this variable to examine. This variable is independent of the specific religion a person reported. We expected to see that the higher frequency groups would have higher proportions of people who answered "Always Wrong" and the lowest proportions of people who answered "Not Wrong at All". Below are the plots of the proportions of each of these groups by survey year.
+We also want to see if how often respondents attend religious services influences their answers to `homosex`. The frequency with which a person attends religious services can be used as a rough metric for how religious they are, which is why we are interested in this variable. This variable is independent of the specific religion a person reported. We expect to see that the higher frequency groups would have higher proportions of people who answered "Always Wrong" and the lowest proportions of people who answered "Not Wrong at All". Below are the plots of the proportions of each of these groups by survey year.
 
 ![Plot of 'always wrong' by 'attend'](images/attend_proportions_always.png)
 ![Plot of 'never wrong' by 'attend'](images/attend_proportions_never.png)
 
 As expected, the proportions of respondents who answered "Always Wrong" in each group are ordered from most frequent to least frequent, and the opposite is true for the proportions of respondents from each group that answered "Not Wrong at All". Again, like in the previous variables examined, all proportions of "Always Wrong" answers decrease with time, and all proportions of "Not Wrong at All" answers increase over time. The most notable group is the group that attends services more than once a week. The difference in proportions between this group and the next closest group is much greater than the difference among any other adjacent groups. Additionally, this group never overlaps with another for either answer. Finally, the magnitude of the rate of change is less than the other groups. This tells us that by this one metric, very religious people are much more likely to disapprove of homosexual sex and are slower to change their opinions.
 
-To see how this variable affects the predictive model, we ran the model for each group over a range of years while holding the other explanatory variables constant. The plot of these predictions is shown below.
+To see how this variable affects the predictive model, we run the model for each group over a range of years while holding the other explanatory variables constant. The plot of these predictions is shown below.
 
 ![Logistic regression plot of 'attend'](images/attend_log.png)
 
@@ -163,7 +162,7 @@ Although the difference in likelihood from the most frequent attenders to the ne
 
 #### Survey Year
 
-Finally, we wanted to see how the model predicts responses based on the year the survey was taken. Because it was apparent in the previous section that the year the survey was taken strongly influences the proportion of respondents who disapprove of homosexual relationships, we wanted to see if the model agreed. We made predictions for a selection of years from 1970 to 2030. These predictions can be seen below, plotted against cohort. The predictions are only plotted for cohorts that are feasible for the year the survey was taken.
+Finally, we want to see how the model predicts responses based on the year the survey was taken. Because it was apparent in the Age-Period-Cohort section that the year the survey was taken strongly influences the proportion of respondents who disapprove of homosexual relationships, we want to see if the model agrees. We model predictions for a selection of years from 1970 to 2030. These predictions can be seen below, plotted against cohort. The predictions are only plotted for cohorts that are feasible for the year the survey was taken.
 
 ![Logistic regression plot of year](images/year_log.png)
 
