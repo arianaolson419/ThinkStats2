@@ -30,7 +30,7 @@ The terms of use for using the GSS data are given in full [on their website](htt
 
 ### Descriptions of Key Variables Used in Analysis
 #### `homosex`
-The `homosex` variable represents how wrong a respondent thinks homosexual sex is. It has been consistently included in every GSS since 1987. The question posed to survey takers is: " What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" The reponse choices are as follows:
+The `homosex` variable represents how wrong a respondent thinks homosexual sex is. It has been consistently included in every GSS since 1987. The question posed to survey takers is: " What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" The response choices are as follows:
 - Always wrong
 - Almost always wrong
 - Wrong only sometimes
@@ -92,7 +92,6 @@ The graphs below plot the average opinion toward same-sex relations for each age
 Below are the graphs of the average percentage of disapproval (left) and approval (right) of same-sex relations within birth decade, and plotted against the age that the respondents were when they took the survey. Across the decade $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 ![Plot of 'always wrong' grouped by cohort, plotted by age](images/coh-age wrong.png)
 ![Plot of 'never wrong' grouped by cohort, plotted by age](images/coh-age right.png)
-
 
 ### Logistic Regression
 
