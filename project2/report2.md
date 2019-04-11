@@ -110,10 +110,11 @@ Although the difference in likelihood from the most frequent attenders to the ne
 
 #### Survey Year
 
-![Plot of 'always wrong' year vs cohort](images/cohort_by_year_always.png)
-![Plot of 'never wrong' year vs cohort](images/cohort_by_year_never.png)
+Finally, we wanted to see how the model predicts responses based on the year the survey was taken. Because it was apparent in the previous section that the year the survey was taken strongly influences the proportion of respondents who disapprove of homosexual relationships, we wanted to see if the model agreed. We made predictions for a selection of years from 1970 to 2030. These predictions can be seen below, plotted against cohort. The predictions are only plotted for cohorts that are feasible for the year the survey was taken.
 
 ![Logistic regression plot of year](images/year_log.png)
+
+Each year group is less likely to answer "Always Wrong" than the one before it. Additionally, there is a negative trend as the cohort increases. These results are both expected based on earlier findings. It appears that the rate of decrease gets larger for higher years.
 
 ## Conclusion
 
