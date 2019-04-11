@@ -14,18 +14,40 @@ The General Social Survey, or GSS, is one of the most frequently analyzed data s
 
 The codebook for the GSS can be found [here](https://gssdataexplorer.norc.org/documents#doc_441) It provides detailed information about the survey design and variables in the dataset.
 
-### Sample Design
+### About the Survey
+For more detailed information about the GSS, please refer to the [codebook introduction](https://gssdataexplorer.norc.org/documents/463/display). 
 
-- collection methods
-- variables we used
-- any choices we made about excluding certain categories
+The GSS is administered to an independently drawn sample of English speaking (and Spanish speaking after 2006) people over the age of 18 and living in non-institutional arrangements in the United States. Several sampling methods have been used throughout the years that the GSS has been administered. These include 
 
-### Variables used in Analysis
+Block quota sampling was employed in earlier survey years (1972-4) and full probability sampling was used in half of the 1975 and 1976 surveys and all subsequent surveys.
+
+Until 2000, the survey was administered with paper and pencil. From 2002 onward, the survey was conducted using computer-aided personal interviewing.
+
+### Descriptions of Key Variables Used in Analysis
 #### `homosex`
+The `homosex` variable represents how wrong a respondent thinks homosexual sex is. It has been consistently included in every GSS since 1987. The question posed to survey takers is: " What about sexual relations between two adults of the same sex--do you think it is always wrong, almost always wrong, wrong only sometimes, or not wrong at all?" The reponse choices are as follows:
+- Always wrong
+- Almost always wrong
+- Wrong only sometimes
+- Not wrong at all
+- Other
+- Don't know
+
+For this analysis, we focused only on respondents who answered "Always wrong" or "Not wrong at all".
+
 #### `year`
+The `year variable represents the year the respondent took the survey.
+
 #### `cohort`
+The `cohort` variable represents the birth cohort of the respondent, or the range of birth years they belong to.
+
 #### `age`
-#### `reg16`
+The `age` variable represents the age of the respondent at the time they took the survey. Respondants are ages 18 and older.
+
+#### `reg16` and `region`
+
+`reg16` represents the region that the respondent lived in at age 16 and `region` represents the region in which the repondent took the survey. Both of these group US states in the same way. These regions are as follows: 
+
 - New England = Maine, Vermont, New Hampshire, Massachusetts, Connecticut, Rhode Island
 - Middle Atlantic = New York, New Jersey, Pennsylvania
 - East North Central = Wisconsin, Illinois, Indiana, Michigan, Ohio
@@ -35,10 +57,6 @@ The codebook for the GSS can be found [here](https://gssdataexplorer.norc.org/do
 - West South Central = Arkansas, Oklahoma, Louisiana, Texas
 - Mountain = Montana, Idaho, Wyoming, Nevada, Utah, Colorado, Arizona, New Mexico
 - Pacific = Washington, Oregon, California, Alaska, Hawaii
-#### ...
-#### ...
-#### ...
-#### ...
 
 ## Analysis
 ### Age-Period-Cohort
