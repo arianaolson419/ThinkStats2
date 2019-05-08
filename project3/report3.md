@@ -6,11 +6,11 @@ Ariana Olson, Emma Price
 
 Researchers and social scientists alike have often wondered if there is a biological difference between "male" and "female" brains. Several studies, including [Sex beyond the genitalia: The human brain mosaic](https://www.pnas.org/content/112/50/15468) and [Multivariate revisit to “sex beyond the genitalia”](https://www.pnas.org/content/113/14/E1966) have used a system of looking into many brain features to try and answer this question and comparing between those male and female study participants, with conflicting results.
 
-Both of the studies above include a dataset that utilizes the absolute volume of brain features in their mosaic analysis. Men are traditionally larger than women and that extends to the size of their brain. As such, it is fairly easy to spot a male brain given the absolute volume of different portions, but this does not necessarily indicate a difference between the brains.
+Both of the studies above include a dataset that includes the absolute volume of regions of the brain in their mosaic analysis. Men are traditionally larger than women and so are their brains. As such, it is fairly easy to spot a male brain given the absolute volume of different portions, but this does not necessarily indicate a difference between the brains.
 
 We examined the predictive capabilities of brain volumes when they are normalized for the total brain volume and how those capabilities compare to the ability of normalized volume to predict a brain's age group -- looking specifically at people 25-49 and 49-60, which would be recognized in most work places as 'young' and 'old'. Given that a lot of gender disparity is made apparent in the workplace, but there is little age disparity in the workplace, this makes an interesting comparison.
 
-We also explored the predictive abilities of brain region connectome, or the concentration of brain tissue in different areas. Specifically, whether connectomes were better at categorizing male and female brains, or early college-late college age groups (18-20 vs. 20-22).
+We also explored the predictive abilities of brain region connectome, or the concentration of brain tissue in different areas. Specifically, whether connectomes were better at categorizing male and female brains, or early college-late college age groups (18-21 vs. 21-26).
 
 We found that generally, there exist more drastic difference between male and female brains and, these specific portions of the mosaic are better at predicting sex based on the data than age group.
 
