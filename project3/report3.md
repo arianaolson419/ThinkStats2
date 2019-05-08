@@ -63,7 +63,7 @@ Which is quite similar to the distribution of total volume between men and women
 
 We performed logistic regression with the absolute volume measurements and scored it in a number of ways to determine how well they could predict a male or female brain. This regression has an R<sup>2</sup> of 0.671, it's prediction a Root Mean Squared Error (RMSE) of 0.574 and a ROC AUC Score of 0.722 -- ROC curve shown below.
 
-![]('images/roc_vol_unnorm.png')
+![](images/roc_vol_unnorm.png)
 
 #### Relative Volume and Sex
 To determine how much the brain volumes differ between male and female outside of total volume, we looked at what percentage of the total brain is made up of the portion in question. The 12 largest Cohen Effects sizes between male and female of relative volumes are shown below, along with the average.
@@ -90,11 +90,11 @@ The Middle Temporal Lobe now has the largest effect size between men and women, 
 
 As a comparison, the superior frontal lobe (of which the absolute volume is shown above) is shown below as a distribution of the relative volume. There is a very large overlap between male and female brains on this relative volumes, further indicating that there is a connection between our volume variables and total volume.
 
-![]('images/rh_superior_volume_norm.png')
+![](images/rh_superior_volume_norm.png)
 
 To understand the predictive power relative volume, we performed another logistic regression of all of these relative volume features. In this regression, the R<sup>2</sup> value is 0.646, the RMSE is 0.595, and the ROC AUC Score is 0.781 -- ROC curve of this is shown below.
 
-![]('images/roc_vol_norm.png')
+![](images/roc_vol_norm.png)
 
 
 #### Absolute Volume and Age
@@ -118,11 +118,11 @@ The 12 absolute volume features with the largest Cohen Effect sizes are shown be
 
 A visual representation of the brain portion with the largest effect size is shown below.
 
-![]('images/rh_medialorbitio_unnorm_age.png')
+![](images/rh_medialorbitio_unnorm_age.png)
 
 The logistic regression to predict age group from these volume features performed quite poorly. The R<sup>2</sup> value was 0.535, the RMSE was 0.682, and the ROC AUC score was 0.534. The ROC curve shown below depicts a curve that is almost inverse, indicating that it would be easier to just guess than use a logistic regression model.
 
-![]('images/roc_vol_age_unnorm.png')
+![](images/roc_vol_age_unnorm.png)
 
 #### Relative Volume and Age
 Within the "young" and "old" age groups, there was as well generally a smaller effect size when looking at the volume of a brain portion relative to the total brain volume. These effect sizes were on average smaller than their gender group counterpart, indicating that there is a larger different between gender groups than age groups when it comes to relative brain volumes. The top 12 Cohen Effect Size are shown below.
@@ -170,7 +170,7 @@ The distribution of `vermis_7` is shown below, depicting a smaller overlap compa
 
 The logistic regression model that attempts to break up participants into male and female based on the connectomes in the brain. This model had an R<sup>2</sup> value of 0.628, an RSME 0.610, and a ROC AUC score of 0.727. The ROC Curve is shown below.
 
-![]('images/roc_sex_conn.png')
+![](images/roc_sex_conn.png)
 
 #### Connectomes and Age
 
@@ -194,13 +194,13 @@ After splitting the data into under and over 21, we calculated the Cohen Effect 
 
 The largest Cohen Effect size between "upperclassmen" and "underclassmen" is the insula_r, of which the distribution between male and female is shown below.
 
-![]('images/insula_age.png')
+![](images/insula_age.png)
 
 The logistic regression of age performed better than the relative or absolute volumes, but still not as well as the connectomes sex. The R<sup>2</sup> value was 0.521, the RMSE was 0.692, and the ROC AUC score was 0.5644. The ROC curve is shown below.
 
-![]('images/roc_age_conn,png')
+![](images/roc_age_conn.png)
 
-## Analysis
+## Interpretation
 
 Our results summary is shown below.
 
