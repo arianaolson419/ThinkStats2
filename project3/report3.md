@@ -12,7 +12,7 @@ We examined the predictive capabilities of brain volumes when they are normalize
 
 We also explored the predictive abilities of brain region connectome, or the concentration of brain tissue in different areas. Specifically, whether connectomes were better at categorizing male and female brains, or early college-late college age groups (18-20 vs. 20-22).
 
-We found that ?????????
+We found that generally, there exist more drastic difference between male and female brains and, these specific portions of the mosaic are better at predicting sex based on the data than age group.
 
 ## Methods
 
@@ -55,7 +55,7 @@ The Cohen Effect Size analysis of all volume-related variables between male and 
 
 Total volume was the most different, as expected, with a number of other portions close behind. The superior frontal lobe volume had the largest effect size between male and female brains -- a KDE plot of that value across both groups is shown below.
 
-![](images/rh_superiorfrontal_volume_unnnorm.png)
+![](images/rh_superior_volume_unnorm.png.png)
 
 Which is quite similar to the distribution of total volume between men and women, indicating that they are likely related, as predicted.
 
