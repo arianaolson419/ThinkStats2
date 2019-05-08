@@ -55,7 +55,7 @@ The Cohen Effect Size analysis of all volume-related variables between male and 
 
 Total volume was the most different, as expected, with a number of other portions close behind. The superior frontal lobe volume had the largest effect size between male and female brains -- a KDE plot of that value across both groups is shown below.
 
-![](images/rh_superior_volume_unnorm.png.png)
+![](images/rh_superior_volume_unnorm.png)
 
 Which is quite similar to the distribution of total volume between men and women, indicating that they are likely related, as predicted.
 
