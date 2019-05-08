@@ -168,6 +168,8 @@ To understand how different connectomes are between male and female brains, we m
 
 The distribution of `vermis_7` is shown below, depicting a smaller overlap compared to relative volume.
 
+![](images/verm_sex.png)
+
 The logistic regression model that attempts to break up participants into male and female based on the connectomes in the brain. This model had an R<sup>2</sup> value of 0.628, an RSME 0.610, and a ROC AUC score of 0.727. The ROC Curve is shown below.
 
 ![](images/roc_sex_conn.png)
