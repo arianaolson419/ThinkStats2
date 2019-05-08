@@ -16,8 +16,6 @@ We found that generally, there exist more drastic difference between male and fe
 
 ## Methods
 
-### Data
-
 #### Brain Volume (Gender vs. Age Predictability) -- Nathan Kline Institute Volume (NKI) Dataset
 
 The NKI released a dataset containing the "volume of cortical and subcortical gray and white matter". This dataset contains volume and age information on 167 female and 100 male brains, collected from MRI scans. It specifically identifies 68 portions of the brain and provides information on each portion's volume.
